@@ -1,0 +1,193 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+/*====  VARIABLES ============================ */
+html {
+  --bg: #e9eff0;
+  --textcolor: #cddad9;
+  --link: #41c3d4;
+  --div: rgba(0, 0, 0, 0.8);
+  --input: #fff;
+  
+}
+ 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg) ; 
+  overflow-Y: hidden;
+}
+
+h1{
+  color: var( --textcolor);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+img {
+width: 100vh;
+}
+
+.theme {
+  
+  margin-left: 90%;
+  padding: 10px;
+  width: 5%;
+  top: 20px;
+  background-color: var(--title-color);
+}
+
+.login{
+  background-color: var(--div);
+  position: absolute;
+  top: 50%;
+  left: 72%;
+  transform: translate(-50%,-50%);
+  box-shadow: 5px 5px 30px #000000;
+  padding: 80px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+input{
+  background: var(--input);
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+button{
+  background-color: #1e90ff;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.2s;
+  
+  
+}
+
+button:hover{
+  background-color:#00bfff;
+  cursor: pointer;
+}
+
+a {
+  display: flex;
+  margin-top: 30px;
+  text-decoration: none;
+  margin-left: 30px;
+  color: var(--link)
+
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  
+}
+
+label {
+
+  cursor: pointer;
+  text-indent: -9999px;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 52px;
+  height: 27px;
+  background: #808080;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+
+}
+
+input:checked + label {
+  background-color: #1e90ff;
+}
+
+input:checked + label::after {
+  background-color: #fff;
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+
+h1 {
+  margin-top: -45px;
+}
+
+  .login {
+    opacity: 98%;
+    display: flex;
+    height: 51%;
+    flex-direction: column;
+    margin-top: 147px;
+    left: 50%;
+    width: 89%;
+}
+  
+
+  input {
+    width: 200px;
+    margin-top: -6px;
+    margin-left: -20px;
+    background: var(--input);
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+input.pass { 
+  margin-top: -20px;
+}
+
+button {
+  font-size: 17px;
+  padding: 10px;
+  margin-top: -1px;
+}
+
+
+  a {
+    margin-top: 20px;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  img {
+    margin-left: 35px;
+    display: flex;
+    width: 41vh;
+  }
+}
