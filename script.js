@@ -17,7 +17,7 @@ const darkTheme = {
   bg: "#333333",
   div: "#696969",
   link: "#41c3d4",
-  textcolor:"fafafa",
+  textcolor:"#fafafa",
   
 }
 

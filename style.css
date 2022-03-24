@@ -11,13 +11,18 @@ html {
   --link: #41c3d4;
   --div: rgba(0, 0, 0, 0.8);
   --input: #fff;
-  
 }
  
 body{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg) ; 
-  overflow-Y: hidden;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
 
 h1{
@@ -28,11 +33,10 @@ h1{
 
 
 img {
-width: 100vh;
+width: 80vh;
 }
 
 .theme {
-  
   margin-left: 90%;
   padding: 10px;
   width: 5%;
@@ -40,21 +44,29 @@ width: 100vh;
   background-color: var(--title-color);
 }
 
-.login{
+.login {
+  display:flex;
+  flex-direction:column;
+  margin-bottom: 5%;
+  margin-right: 50vh ;
+  max-height: 500px;
+  max-width: 500px;
+  margin-top: 20vh;
+  height: 50%;
+  padding: 50px;
+  justify-content:center;
+  align-items:center;
+  border-radius: 8px;
   background-color: var(--div);
-  position: absolute;
-  top: 50%;
-  left: 72%;
-  transform: translate(-50%,-50%);
-  box-shadow: 5px 5px 30px #000000;
-  padding: 80px;
-  border-radius: 15px;
-  color: #fff;
+  z-index: 10;
+  box-shadow: 5px 10px 20px #000;
+  
 }
 
-input{
+input {
   background: var(--input);
-  padding: 15px;
+  margin: 12px 0;
+  padding: 12px;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -62,16 +74,15 @@ input{
 }
 
 button{
+  margin-top: 16px;
   background-color: #1e90ff;
   border: none;
   padding: 15px;
-  width: 100%;
+  width: 200px;
   border-radius: 10px;
   font-size: 20px;
   color: #fff;
   transition: 0.2s;
-  
-  
 }
 
 button:hover{
@@ -83,8 +94,7 @@ a {
   display: flex;
   margin-top: 30px;
   text-decoration: none;
-  margin-left: 30px;
-  color: var(--link)
+  color: var(--link);
 
 }
 
@@ -94,6 +104,13 @@ input[type=checkbox] {
   visibility: hidden;
   
 }
+
+
+.label-content {
+  position: absolute;
+  right: 16px;
+}
+
 
 label {
 
@@ -138,56 +155,43 @@ label:active:after {
 
 /* Responsive */
 
+@media (max-width: 960px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media only screen and (max-width: 600px) {
 
+body {
+ display: flex;
+}
+
 h1 {
-  margin-top: -45px;
+  margin: 0;
 }
 
-  .login {
-    opacity: 98%;
-    display: flex;
-    height: 51%;
-    flex-direction: column;
-    margin-top: 147px;
-    left: 50%;
-    width: 89%;
-}
-  
-
-  input {
-    width: 200px;
-    margin-top: -6px;
-    margin-left: -20px;
-    background: var(--input);
-    padding: 11px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
+input {
+  top: 12%;
+  margin-top: 6%;
 }
 
-input.pass { 
-  margin-top: -20px;
-}
-
-button {
-  font-size: 17px;
-  padding: 10px;
-  margin-top: -1px;
-}
-
-
-  a {
-    margin-top: 20px;
-    margin-left: 2px;
+.login {
+    margin: 0;
+    top: 46%;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
     text-align: center;
-    text-decoration: none;
-  }
+  
+}
 
   img {
-    margin-left: 35px;
-    display: flex;
-    width: 41vh;
+    margin-left: -80px;
+    width: 80%;
   }
 }
+  
+  
+
